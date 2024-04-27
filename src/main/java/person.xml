@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<bean class="spring_hibernate_xml.dto.PanCard" id="card">
+		<property name="id" value="4"></property>
+		<property name="name" value="Nilesh sagar"></property>
+		<property name="address" value="Nilanga"></property>
+	</bean>
+	
+	<bean class="spring_hibernate_xml.dto.Person" id="per">
+		<property name="id" value="4"></property>
+		<property name="name" value="Nilesh Sagar"></property>
+		<property name="phone" value="9875578451"></property>
+		<property name="address" value="Nilanga"></property>
+		<property name="card" ref="card"></property>
+	</bean>
+	<bean class="spring_hibernate_xml.dao.PersonDao" id="dao"></bean>
+
+</beans>
